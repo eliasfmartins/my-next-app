@@ -6,7 +6,7 @@ height: 60px;
 display: flex;
 align-items: center;
 justify-content: center;
-background: ${props => props.theme.colors.terciaryColor};
+background: ${props => props.theme.colors.quartenaryColor};
 
 `;
 export const HeaderContent = styled.div`
@@ -15,7 +15,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-border-bottom: 2px solid ${({theme})=>theme.colors.primaryColor};
+border-bottom: solid 2px ${({ theme}) => theme.colors.primaryColor};
 height: 100%;
 color: ${({theme}) => theme.colors.primaryColor};
 font-size: 1.5rem;
@@ -51,6 +51,7 @@ input{
   border: none;
   color:${({theme})=> theme.colors.primaryColor};
   outline: transparent;
+  font-size: 1.1rem;
 }
 button{
   background: transparent;

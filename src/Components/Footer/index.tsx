@@ -4,7 +4,7 @@ export const Footer = () => {
   return(
     <FooterContainer>
       <FooterContent>
-      Feito Com carinho por <span>Elias Fonseca Martins</span>
+      Feito Com carinho por  <a href='#'> {' '+'<Elias Fonseca Martins/>'}</a>
       </FooterContent>
     </FooterContainer>
   )
