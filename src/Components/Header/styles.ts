@@ -6,6 +6,8 @@ height: 60px;
 display: flex;
 align-items: center;
 justify-content: center;
+background: ${props => props.theme.colors.terciaryColor};
+
 `;
 export const HeaderContent = styled.div`
 max-width: 1200px;
@@ -13,29 +15,52 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-border-bottom: 2px solid lightblue;
-
-div {
+border-bottom: 2px solid ${({theme})=>theme.colors.primaryColor};
+height: 100%;
+color: ${({theme}) => theme.colors.primaryColor};
+font-size: 1.5rem;
+nav{
   display: flex;
-  width: 300px;
-  position: relative;
+  list-style: none;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+}
+li{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 1s;
+  &:hover{
+    color: white;
+  }
+}
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({theme})=> theme.colors.sextenarycolor};
+  color: ${({theme})=> theme.colors.primaryColor};
+  height: 28px;
+  border-radius: 25px;
+  padding: 10px 10px 10px 25px;
+}
+input{
   padding: 5px;
-
-}
-button {
-  background: transparent;
+  background-color: transparent;
   border: none;
-  position: absolute;
-  right: 15px;
-  top: 12px;
+  color:${({theme})=> theme.colors.primaryColor};
+  outline: transparent;
 }
+button{
+  background: transparent;
+  color: ${({theme})=>theme.colors.primaryColor};
+  border: none;
+  transition: 1s;
+  &:hover{
+    color: white;
+    scale:1.2
+  }
 
-`;
-export const InputSearch = styled.input`
-  border-radius: 12px;
-  padding: 15px 18px;
-  line-height: 20px;
-  width: 100%;
+}
 `;
