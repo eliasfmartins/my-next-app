@@ -5,6 +5,7 @@ interface Cards {
   id:number
   title: string
   body:string
+  imgUrl:string
 }
 export default function Home() {
   const [posts, setPosts] = useState<Cards[]>([]);
@@ -16,9 +17,12 @@ export default function Home() {
     const jsonPhotos = await fetch('https://jsonplaceholder.typicode.com/photos');
 
     const [responsePosts,responsePhotos] = await Promise.all([jsonPosts,jsonPhotos])
-    const  responsePostsJson = await responsePosts.json();
+    const responsePostsJson = await responsePosts.json();
     const responsePhotosJson = await responsePhotos.json();
-    setPosts(responsePostsJson)
+    const responsePostsAndPhotosJson = responsePostsJson.map((posts:{},index:number)=>{
+      return { ...posts, imgUrl:responsePhotosJson[index].url}
+    })
+    setPosts(responsePostsAndPhotosJson)
   }
   return (
     <PageContainer>
@@ -26,6 +30,7 @@ export default function Home() {
       {posts ? (
           posts.map((post) => (
             <div key={post.id}>
+              <img src={post.imgUrl} alt="" />
               <h1>{post.title}</h1>
               <p>{post.body}</p>
             </div>
