@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { PageContainer, PageContent } from "./pageStyle";
+import { Card } from "@/Components/Card";
 interface Cards {
   id:number
   title: string
@@ -28,12 +29,9 @@ export default function Home() {
     <PageContainer>
       <PageContent>
       {posts ? (
-          posts.map((post) => (
-            <div key={post.id}>
-              <img src={post.imgUrl} alt="" />
-              <h1>{post.title}</h1>
-              <p>{post.body}</p>
-            </div>
+          posts.map(({body,id,title,imgUrl}) => (
+            <Card body={body} id={id} imgUrl={imgUrl} title={title} />
+
           ))
         ) : (
           <h1>Carregando...</h1>

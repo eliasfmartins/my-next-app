@@ -5,7 +5,7 @@ export const Header = () => {
   return(
     <HeaderContainer>
       <HeaderContent>
-      <h1>SCImoveis</h1>
+      <h1>NextProject</h1>
       <nav>
         <li><HourglassMedium/> Home</li>
         <li><BookBookmark/> Projetos</li>

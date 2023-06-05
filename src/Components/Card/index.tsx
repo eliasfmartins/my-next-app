@@ -1,3 +1,6 @@
+'use client'
+import { CardContainer, CardContent } from "./styles"
+
 interface CardProps {
   id:number
   title: string
@@ -7,10 +10,14 @@ interface CardProps {
 
 export const Card = ({id,title,body,imgUrl}:CardProps) => {
 return(
-  <div key={id}>
+  <CardContainer key={id}>
     <img src={imgUrl} alt="" />
+    <CardContent>
+
     <h1>{title}</h1>
     <p>{body}</p>
-  </div>
+    <button>Click for more...</button>
+    </CardContent>
+  </CardContainer>
 )
 }
