@@ -26,6 +26,12 @@ nav{
   justify-content: center;
   gap: 2rem;
 }
+.search{
+  display: none;
+}
+h1{
+  margin-left:20px;
+}
 li{
   display: flex;
   align-items: center;
@@ -53,6 +59,21 @@ input{
   outline: transparent;
   font-size: 1.1rem;
 }
+button.mobile{
+    visibility: hidden;
+    z-index: 20000;
+  hr{
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  }
+  hr{
+      width: 40px;
+      border-radius: 20px;
+      padding: 2px;
+      background-color: white;
+      transition: 1.2s;
+    }
 button{
   background: transparent;
   color: ${({ theme }) => theme.colors.primaryColor};
@@ -63,24 +84,71 @@ button{
     scale:1.2
   }
 
+
 }
 @media (max-width:1200px){
+  button.mobile{
+    visibility: visible;
+    position: relative;
+    top: 2px;
+    right: 25px;
+
+  }
   nav{
     position: absolute;
     height:0;
     display: flex;
+    flex-direction: column;
     list-style: none;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly ;
     gap: 2rem;
     visibility: hidden;
     transition: height 1.2s;
+    background-color: ${({ theme }) => theme.colors.quintenaryColor};
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow:hidden ;
 
   }
   nav.actived{
+    position: fixed;
     visibility: visible;
     width: 100%;
     height: 100%;
+
   }
+  button.mobile.actived{
+      visibility: visible;
+      position: fixed;
+      top: 8px;
+      right: 25px;
+
+    hr.one{
+      transform: rotate(405deg);
+      position: relative;
+      bottom: -16px;
+    }
+    hr.two{
+      background: transparent;
+      border: transparent;
+    }
+    hr.tree{
+      transform: rotate(-405deg);
+      position: relative;
+      top: -8px;
+    }
+    }
+    @media (max-width:650px){
+      div.input{
+        display: none;
+      }
+      .search{
+      display: block;
+      }
+    }
 }
 `;

@@ -33,6 +33,7 @@ export default function Home() {
     );
     setPosts(responsePostsAndPhotosJson);
   };
+
   return (
     <PageContainer>
       <PageContent>

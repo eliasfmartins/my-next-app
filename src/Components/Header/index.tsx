@@ -1,6 +1,7 @@
 import {
   Bell,
   BookBookmark,
+  FileSearch,
   HourglassMedium,
   MagnifyingGlass,
 } from 'phosphor-react';
@@ -13,16 +14,20 @@ export const Header = () => {
     <HeaderContainer>
       <HeaderContent>
         <h1>NextProject</h1>
-        <nav>
-          <li>
+        <nav className={isOpen ? 'actived' : ''}>
+          <li onClick={() => setIsOpen(false)}>
             <HourglassMedium /> Home
           </li>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <BookBookmark /> Projetos
           </li>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <Bell />
             Sem ideia{' '}
+          </li>
+          <li className="search" onClick={() => setIsOpen(false)}>
+            <FileSearch />
+            Sarch{' '}
           </li>
         </nav>
         <div className="input">
@@ -31,6 +36,14 @@ export const Header = () => {
             <MagnifyingGlass size={20} />
           </button>
         </div>
+        <button
+          className={isOpen ? 'mobile actived' : 'mobile'}
+          onClick={() => setIsOpen((e) => !e)}
+        >
+          <hr className="one" />
+          <hr className="two" />
+          <hr className="tree" />
+        </button>
       </HeaderContent>
     </HeaderContainer>
   );

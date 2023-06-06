@@ -11,7 +11,7 @@ border: 2px solid white;
 border-radius: 8px;
 img{
   border-radius: 8px 8px 0 0 ;
-  min-width: 250px;
+  min-width: 280px;
   width: 100%;
 }
 button{
@@ -37,7 +37,7 @@ padding: 10px;
 border-top:2px solid white ;
 width: 80%;
 margin-bottom: 25px;
-min-height: 400px;
+min-height: 350px;
 h1{
   text-align: center;
 }
