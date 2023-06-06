@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
 width: 100%;
@@ -6,7 +6,7 @@ height: 60px;
 display: flex;
 align-items: center;
 justify-content: center;
-background: ${props => props.theme.colors.quartenaryColor};
+background: ${(props) => props.theme.colors.quartenaryColor};
 
 `;
 export const HeaderContent = styled.div`
@@ -15,9 +15,9 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-border-bottom: solid 2px ${({ theme}) => theme.colors.primaryColor};
+border-bottom: solid 2px ${({ theme }) => theme.colors.primaryColor};
 height: 100%;
-color: ${({theme}) => theme.colors.primaryColor};
+color: ${({ theme }) => theme.colors.primaryColor};
 font-size: 1.5rem;
 nav{
   display: flex;
@@ -39,8 +39,8 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({theme})=> theme.colors.sextenarycolor};
-  color: ${({theme})=> theme.colors.primaryColor};
+  background-color: ${({ theme }) => theme.colors.sextenarycolor};
+  color: ${({ theme }) => theme.colors.primaryColor};
   height: 28px;
   border-radius: 25px;
   padding: 10px 10px 10px 25px;
@@ -49,13 +49,13 @@ input{
   padding: 5px;
   background-color: transparent;
   border: none;
-  color:${({theme})=> theme.colors.primaryColor};
+  color:${({ theme }) => theme.colors.primaryColor};
   outline: transparent;
   font-size: 1.1rem;
 }
 button{
   background: transparent;
-  color: ${({theme})=>theme.colors.primaryColor};
+  color: ${({ theme }) => theme.colors.primaryColor};
   border: none;
   transition: 1s;
   &:hover{
@@ -63,5 +63,24 @@ button{
     scale:1.2
   }
 
+}
+@media (max-width:1200px){
+  nav{
+    position: absolute;
+    height:0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    visibility: hidden;
+    transition: height 1.2s;
+
+  }
+  nav.actived{
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+  }
 }
 `;
