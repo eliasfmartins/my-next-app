@@ -18,6 +18,7 @@ export const PageContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   div.cards{
     align-items: center;
     margin-top: 10px;
@@ -38,7 +39,7 @@ align-items: center;
 transition: 1s;
 width: 100%;
 height: ${({ variable }) => (variable ? '120px' : '0')};
-padding:${({ variable }) => (variable ? '20px' : '0')};
+padding:${({ variable }) => (variable ? '20px 0' : '0')};
 visibility: ${({ variable }) => (variable ? 'visible' : 'hidden')};
 overflow: hidden;
 h1{

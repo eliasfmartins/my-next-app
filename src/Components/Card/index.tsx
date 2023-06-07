@@ -1,7 +1,7 @@
 'use client';
 import { CardContainer, CardContent } from './styles';
 
-interface CardProps {
+export interface CardProps {
   id: number;
   title: string;
   body: string;
