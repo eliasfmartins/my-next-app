@@ -1,8 +1,11 @@
 /* eslint-disable prettier/prettier */
 'use client';
-import { useEffect, useState } from 'react';
-import { PageContainer, PageContent } from './pageStyle';
+import { useContext, useEffect, useState } from 'react';
+import { InputField, PageContainer, PageContent } from './pageStyle';
 import { Card } from '@/Components/Card';
+import {  MagnifyingGlass, X } from 'phosphor-react';
+import { Context } from '@/contexts/searchContext';
+import { handlePosts } from './fetch';
 interface Cards {
   id: number;
   title: string;
@@ -12,30 +15,29 @@ interface Cards {
 export default function Home() {
   const [posts, setPosts] = useState<Cards[]>([]);
   useEffect(() => {
-    handlePosts();
-  }, []);
-  const handlePosts = async () => {
-    const jsonPosts = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const jsonPhotos = await fetch(
-      'https://jsonplaceholder.typicode.com/photos',
-    );
+    const fetchData = async () => {
 
-    const [responsePosts, responsePhotos] = await Promise.all([
-      jsonPosts,
-      jsonPhotos,
-    ]);
-    const responsePostsJson = await responsePosts.json();
-    const responsePhotosJson = await responsePhotos.json();
-    const responsePostsAndPhotosJson = responsePostsJson.map(
-      (posts: {}, index: number) => {
-        return { ...posts, imgUrl: responsePhotosJson[index].url };
-      },
-    );
-    setPosts(responsePostsAndPhotosJson);
-  };
+      const responsePostsAndPhotosJson = await handlePosts();
+      setPosts(responsePostsAndPhotosJson);
+    };
+    fetchData();
+ }, []);
 
+  const {search,setSearch} = useContext(Context)
   return (
     <PageContainer>
+      <InputField variable ={search}>
+        <h1>Hello</h1>
+      <div className="input">
+          <input type="text" />
+          <button >
+            <MagnifyingGlass size={20} />
+          </button>
+          <button>
+            <X size={20} onClick={() => setSearch(!search)}/>
+          </button>
+        </div>
+      </InputField>
       <PageContent>
         <div className='cards'>
 

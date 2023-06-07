@@ -1,8 +1,19 @@
-import { createContext, useState } from 'react';
+'use client';
+import React, { createContext, useState } from 'react';
 
-export const SearchContext = createContext({});
-const [search, setSearch] = useState<boolean>(false);
-
-<SearchContext.Provider value={{ search, setSearch }}>
-{...children}
-</SearchContext.Provider>;
+type ContextType = {
+  search: boolean;
+  setSearch: (value: boolean) => void;
+};
+export const Context = createContext<ContextType>({
+  search: false,
+  setSearch: () => {},
+});
+export const SearchContext = ({ children }: { children: React.ReactNode }) => {
+  const [search, setSearch] = useState(false);
+  return (
+    <Context.Provider value={{ search, setSearch }}>
+      {children}
+    </Context.Provider>
+  );
+};

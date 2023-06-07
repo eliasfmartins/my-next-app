@@ -33,14 +33,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 10px;
 border-top:2px solid white ;
-width: 80%;
+width: 95%;
+padding: 5px;
 margin-bottom: 25px;
-min-height: 350px;
+min-height: 300px;
 h1{
   text-align: center;
 }
-
-
 `;

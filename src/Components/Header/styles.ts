@@ -29,9 +29,6 @@ nav{
 .search{
   display: none;
 }
-h1{
-  margin-left:20px;
-}
 li{
   display: flex;
   align-items: center;
@@ -47,19 +44,13 @@ li{
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.sextenarycolor};
   color: ${({ theme }) => theme.colors.primaryColor};
-  height: 28px;
-  border-radius: 25px;
-  padding: 10px 10px 10px 25px;
+  padding: 8px;
+  border-radius: 12px;
+  transition: 1s;
 }
-input{
-  padding: 5px;
-  background-color: transparent;
-  border: none;
-  color:${({ theme }) => theme.colors.primaryColor};
-  outline: transparent;
-  font-size: 1.1rem;
-}
+
 button.mobile{
+    display: none;
     visibility: hidden;
     z-index: 20000;
   hr{

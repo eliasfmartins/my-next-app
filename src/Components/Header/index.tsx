@@ -4,12 +4,15 @@ import {
   FileSearch,
   HourglassMedium,
   MagnifyingGlass,
+  X,
 } from 'phosphor-react';
 import { HeaderContainer, HeaderContent } from './styles';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { Context } from '@/contexts/searchContext';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { search, setSearch } = useContext(Context);
   return (
     <HeaderContainer>
       <HeaderContent>
@@ -30,11 +33,16 @@ export const Header = () => {
             Sarch{' '}
           </li>
         </nav>
-        <div className="input">
-          <input type="text" />
-          <button>
-            <MagnifyingGlass size={20} />
-          </button>
+        <div className="input" onClick={() => setSearch(!search)}>
+          {search ? (
+            <button>
+              <X size={25} />
+            </button>
+          ) : (
+            <button>
+              <MagnifyingGlass size={25} />
+            </button>
+          )}
         </div>
         <button
           className={isOpen ? 'mobile actived' : 'mobile'}
