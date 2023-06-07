@@ -51,7 +51,7 @@ export default function Home() {
       </InputField>
       <PageContent>
         <div className='cards'>
-        {filteredPosts.length!==0?<Posts posts={filteredPosts} /> : <h1>Não existem posts</h1>}
+        {filteredPosts.length!==0?<Posts filteredPosts={filteredPosts} /> : <h1>Não existem posts</h1>}
 
         </div>
 
