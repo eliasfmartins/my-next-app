@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { CardContainer, CardContent } from './styles';
 
 export interface CardProps {
@@ -15,7 +16,9 @@ export const Card = ({ id, title, body, imgUrl }: CardProps) => {
       <CardContent>
         <h1>{title}</h1>
         <p>{body}</p>
-        <button>Click for more...</button>
+        <Link href={`/pages/${id}`}>
+          <button>Click for more...</button>
+        </Link>
       </CardContent>
     </CardContainer>
   );
