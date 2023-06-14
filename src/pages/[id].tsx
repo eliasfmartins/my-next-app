@@ -10,7 +10,7 @@ export const PageCards = ({ body, imgUrl, title }: CardProps) => {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <div key={id}>
+    <div>
       <img src={imgUrl} alt="description" />
       <div>
         <h2>{id}</h2>
