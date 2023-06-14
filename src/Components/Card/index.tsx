@@ -16,7 +16,7 @@ export const Card = ({ id, title, body, imgUrl }: CardProps) => {
       <CardContent>
         <h1>{title}</h1>
         <p>{body}</p>
-        <Link href={`/pages/${id}`}>
+        <Link href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
           <button>Click for more...</button>
         </Link>
       </CardContent>

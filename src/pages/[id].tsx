@@ -1,22 +1,17 @@
 import { useRouter } from 'next/router';
 
-export interface CardProps {
-  // id: number;
-  title: string;
-  body: string;
-  imgUrl: string;
-}
-export const PageCards = ({ body, imgUrl, title }: CardProps) => {
-  const router = useRouter();
-  const { id } = router.query;
+export default function CardPage() {
+  const { query, back } = useRouter();
+  const { id, imgUrl, body, title } = query;
+
   return (
     <div>
-      <img src={imgUrl} alt="description" />
-      <div>
-        <h2>{id}</h2>
-        <h1>{title}</h1>
-        <p>{body}</p>
-      </div>
+      <h1>Card ID: {id}</h1>
+      <img src={imgUrl} alt="nothing" />
+      <h2>{title}</h2>
+      <p>{body}</p>
+
+      <button onClick={() => back()}>back</button>
     </div>
   );
-};
+}
