@@ -30,7 +30,7 @@ export const Header = () => {
           </li>
           <li className="search" onClick={() => setIsOpen(false)}>
             <FileSearch />
-            Sarch{' '}
+            Search{' '}
           </li>
         </nav>
         <div className="input" onClick={() => setSearch(!search)}>

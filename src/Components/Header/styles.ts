@@ -9,10 +9,11 @@ align-items: center;
 justify-content: center;
 background: ${(props) => props.theme.colors.quartenaryColor};
 
+
 `;
 export const HeaderContent = styled.div`
 max-width: 1200px;
-width: 100%;
+width: 90%;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -26,6 +27,7 @@ nav{
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  transition: 1.5s;
 }
 .search{
   display: none;
@@ -80,11 +82,16 @@ button{
 }
 @media (max-width:1200px){
   button.mobile{
+    display: block;
     visibility: visible;
     position: relative;
-    top: 2px;
-    right: 25px;
+    top: 0px;
+    right: 2px;
 
+  }
+  .input{
+    position: absolute;
+    right: 140px;
   }
   nav{
     position: absolute;
@@ -104,6 +111,7 @@ button{
     right: 0;
     bottom: 0;
     overflow:hidden ;
+    transition: 1.5s;
 
   }
   nav.actived{
@@ -111,13 +119,14 @@ button{
     visibility: visible;
     width: 100%;
     height: 100%;
+    transition: 1.5s;
 
   }
   button.mobile.actived{
       visibility: visible;
       position: fixed;
-      top: 8px;
-      right: 25px;
+      top: 2px;
+      right: 5%;
 
     hr.one{
       transform: rotate(405deg);
@@ -133,11 +142,13 @@ button{
       position: relative;
       top: -8px;
     }
+
     }
     @media (max-width:650px){
-      div.input{
-        display: none;
-      }
+      .input{
+      position: absolute;
+      right: 100px;
+    }
       .search{
       display: block;
       }
