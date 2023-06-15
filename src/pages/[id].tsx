@@ -1,17 +1,20 @@
 import { useRouter } from 'next/router';
+import { IdContainer, IdContent } from '../styles/[id]';
 
 export default function CardPage() {
   const { query, back } = useRouter();
   const { id, imgUrl, body, title } = query;
 
   return (
-    <div>
-      <h1>Card ID: {id}</h1>
-      <img src={imgUrl} alt="nothing" />
-      <h2>{title}</h2>
-      <p>{body}</p>
+    <IdContainer>
+      {imgUrl ? <img src={String(imgUrl)} alt="nothing" /> : 'nada a exibir'}
+      <IdContent>
+        <h1>{title}</h1>
+        <h2>Card ID: {id}</h2>
+        <p>{body}</p>
+      </IdContent>
 
       <button onClick={() => back()}>back</button>
-    </div>
+    </IdContainer>
   );
 }
