@@ -1,6 +1,5 @@
 'use client';
-import Link from 'next/link';
-import { CardContainer, CardContent } from './styles';
+import { CardContainer, CardContent, LinkStyle } from './styles';
 
 export interface CardProps {
   id: number;
@@ -16,9 +15,9 @@ export const Card = ({ id, title, body, imgUrl }: CardProps) => {
       <CardContent>
         <h1>{title}</h1>
         <p>{body}</p>
-        <Link href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
+        <LinkStyle href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
           <button>Click for more...</button>
-        </Link>
+        </LinkStyle>
       </CardContent>
     </CardContainer>
   );

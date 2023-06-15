@@ -20,16 +20,20 @@ export const PageContent = styled.div`
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  div.cards{
-    align-items: center;
+
+  div.cards {
     margin-top: 10px;
-    align-items: center;
-    justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     gap: 1rem;
+    align-items: center;
+    justify-items: center;
+
+
+  
   }
 `;
+
 export const InputField = styled.div<InputFildProps>`
 display: flex;
 flex-direction: column;

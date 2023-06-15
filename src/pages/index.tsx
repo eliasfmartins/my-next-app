@@ -1,7 +1,7 @@
 'use client';
 /* eslint-disable prettier/prettier */
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
-import { InputField, PageContainer, PageContent } from '../app/pageStyle';
+import { InputField, PageContainer, PageContent } from '../styles/pageStyle';
 import {  MagnifyingGlass, X } from 'phosphor-react';
 import { Context } from '@/contexts/searchContext';
 import { handlePosts } from '../app/fetch';
