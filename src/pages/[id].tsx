@@ -12,9 +12,8 @@ export default function CardPage() {
         <h1>{title}</h1>
         <h2>Card ID: {id}</h2>
         <p>{body}</p>
+        <button onClick={() => back()}>back</button>
       </IdContent>
-
-      <button onClick={() => back()}>back</button>
     </IdContainer>
   );
 }
