@@ -41,6 +41,10 @@ li{
     color: white;
   }
 }
+a{
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.secondaryColor};
+}
 .input{
   display: flex;
   align-items: center;
@@ -77,6 +81,10 @@ button{
     color: white;
     scale:1.2
   }
+  .busca{
+    position: absolute;
+    left: 0;
+  }
 
 
 }
@@ -84,14 +92,16 @@ button{
   button.mobile{
     display: block;
     visibility: visible;
-    position: relative;
     top: 0px;
     right: 2px;
 
   }
   .input{
-    position: absolute;
-    right: 140px;
+    display: flex;
+    gap: 1rem;
+    right: 0;
+    height: 35px;
+    width: 120px;
   }
   nav{
     position: absolute;
@@ -122,11 +132,15 @@ button{
     transition: 1.5s;
 
   }
-  button.mobile.actived{
+  div.input.fixed{
       visibility: visible;
       position: fixed;
-      top: 2px;
+      z-index: 500000;
+      background: transparent;
       right: 5%;
+      .busca{
+        visibility: hidden;
+      }
 
     hr.one{
       transform: rotate(405deg);
@@ -146,8 +160,8 @@ button{
     }
     @media (max-width:650px){
       .input{
-      position: absolute;
-      right: 100px;
+      position: relative;
+      right: 0px;
     }
       .search{
       display: block;

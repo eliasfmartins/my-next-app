@@ -9,7 +9,7 @@ gap: 1rem;
 display: flex;
 flex-direction: column;
 align-items: center;
-border: 2px solid white;
+border: 1px solid white;
 border-radius: 8px;
 max-width: 90%;
 align-items: center;

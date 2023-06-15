@@ -10,7 +10,7 @@ background: ${({ theme }) => theme.colors.quartenaryColor};
 `;
 export const FooterContent = styled.div`
 max-width: 1200px;
-width: 100%;
+width: 90%;
 height: 100%;
 display: flex;
 align-items: center;

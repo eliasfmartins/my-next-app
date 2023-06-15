@@ -1,7 +1,6 @@
 import {
   Bell,
   BookBookmark,
-  FileSearch,
   HourglassMedium,
   MagnifyingGlass,
   X,
@@ -9,49 +8,67 @@ import {
 import { HeaderContainer, HeaderContent } from './styles';
 import { useContext, useState } from 'react';
 import { Context } from '@/contexts/searchContext';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { search, setSearch } = useContext(Context);
+  const router = useRouter();
+  const isHomePage = router.pathname === '/';
   return (
     <HeaderContainer>
       <HeaderContent>
         <h1>NextProject</h1>
         <nav className={isOpen ? 'actived' : ''}>
-          <li onClick={() => setIsOpen(false)}>
-            <HourglassMedium /> Home
-          </li>
-          <li onClick={() => setIsOpen(false)}>
-            <BookBookmark /> Projetos
-          </li>
-          <li onClick={() => setIsOpen(false)}>
-            <Bell />
-            Sem ideia{' '}
-          </li>
-          <li className="search" onClick={() => setIsOpen(false)}>
+          <Link href={'/'}>
+            <li onClick={() => setIsOpen(false)}>
+              <HourglassMedium /> Home
+            </li>
+          </Link>
+          <Link href={'/'}>
+            <li onClick={() => setIsOpen(false)}>
+              <BookBookmark /> Projetos
+            </li>
+          </Link>
+          <Link href={'/'}>
+            <li onClick={() => setIsOpen(false)}>
+              <Bell />
+              Sem ideia{' '}
+            </li>
+          </Link>
+          {/* <li className="search" onClick={() => setIsOpen(false)}>
             <FileSearch />
             Search{' '}
-          </li>
+          </li> */}
         </nav>
-        <div className="input" onClick={() => setSearch(!search)}>
+        <div className={isOpen ? 'input fixed' : 'input'}>
           {search ? (
-            <button>
+            <button
+              className="busca"
+              disabled={!isHomePage}
+              onClick={() => setSearch(!search)}
+            >
               <X size={25} />
             </button>
           ) : (
-            <button>
+            <button
+              className="busca"
+              disabled={!isHomePage}
+              onClick={() => setSearch(!search)}
+            >
               <MagnifyingGlass size={25} />
             </button>
           )}
+          <button
+            className={isOpen ? 'mobile actived' : 'mobile'}
+            onClick={() => setIsOpen((e) => !e)}
+          >
+            <hr className="one" />
+            <hr className="two" />
+            <hr className="tree" />
+          </button>
         </div>
-        <button
-          className={isOpen ? 'mobile actived' : 'mobile'}
-          onClick={() => setIsOpen((e) => !e)}
-        >
-          <hr className="one" />
-          <hr className="two" />
-          <hr className="tree" />
-        </button>
       </HeaderContent>
     </HeaderContainer>
   );
