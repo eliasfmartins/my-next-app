@@ -8,8 +8,9 @@ display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: center;
+width: 100%;
+background: red;
 background: ${({ theme }) => theme.colors.quartenaryColor};
-
 `;
 export const PageContent = styled.div`
   color: ${({ theme }) => theme.colors.primaryColor};
@@ -18,6 +19,7 @@ export const PageContent = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  width: 100%;
   div.cards{
     align-items: center;
     margin-top: 10px;
@@ -25,11 +27,8 @@ export const PageContent = styled.div`
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-
     gap: 1rem;
-
   }
-
 `;
 export const InputField = styled.div<InputFildProps>`
 display: flex;

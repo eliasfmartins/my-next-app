@@ -5,7 +5,6 @@ import { Header } from '../Components/Header/index';
 import { ThemeProvider } from 'styled-components';
 import { themeDefault } from '@/styles/theme';
 import { Footer } from '@/Components/Footer';
-import { SearchContext } from '../contexts/searchContext';
 const roboto = Fira_Sans_Condensed({ weight: '400', subsets: ['latin'] });
 
 export default function RootLayout({
@@ -18,12 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <ThemeProvider theme={themeDefault}>
-          <SearchContext>
-            <Header />
-            {children}
-            <Footer />
-            <GlobalStyles />
-          </SearchContext>
+          <Header />
+          {children}
+          <Footer />
+          <GlobalStyles />
         </ThemeProvider>
       </body>
     </html>

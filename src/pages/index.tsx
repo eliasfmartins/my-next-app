@@ -1,5 +1,5 @@
-/* eslint-disable prettier/prettier */
 'use client';
+/* eslint-disable prettier/prettier */
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { InputField, PageContainer, PageContent } from '../app/pageStyle';
 import {  MagnifyingGlass, X } from 'phosphor-react';
@@ -15,10 +15,9 @@ interface Cards {
 export default function Home() {
   const [posts, setPosts] = useState<Cards[]>([]);
   const  [value, setValue] = useState('')
-  const  filteredPosts = value?posts.filter(post => {
+  const  filteredPosts = value ? posts.filter(post => {
     return post.title.toLowerCase().includes(value.toLowerCase())
   })
-
   :
   posts
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function Home() {
   return (
     <PageContainer>
       <InputField variable ={search}>
-        {value&&<h1>Search for: {value}</h1>}
+        {value ? <h1>Search for: {value}</h1> : <h1>{"Your Search Here"}</h1>}
       <div className="input">
           <input type="search" onChange={(e)=> handleInputField(e) } value={value}/>
           <button >
