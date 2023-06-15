@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 'use client';
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
-import { InputField, PageContainer, PageContent } from './pageStyle';
+import { InputField, PageContainer, PageContent } from '../app/pageStyle';
 import {  MagnifyingGlass, X } from 'phosphor-react';
 import { Context } from '@/contexts/searchContext';
-import { handlePosts } from './fetch';
+import { handlePosts } from '../app/fetch';
 import { Posts } from '@/Components/Posts';
 interface Cards {
   id: number;
