@@ -19,7 +19,7 @@ export const Card = ({ id, title, body, imgUrl }: CardProps) => {
         <h1>{title}</h1>
         <p>{body}</p>
         <LinkStyle href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
-          <button onClick={() => setSearch(search === false)}>
+          <button onClick={() => setSearch(search === true)}>
             Click for more...
           </button>
         </LinkStyle>

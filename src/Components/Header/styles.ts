@@ -8,8 +8,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 background: ${(props) => props.theme.colors.quartenaryColor};
-
-
 `;
 export const HeaderContent = styled.div`
 max-width: 1200px;

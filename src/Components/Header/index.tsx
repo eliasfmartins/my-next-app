@@ -19,7 +19,9 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <h1>NextProject</h1>
+        <Link href={'/'}>
+          <h1>NextProject</h1>
+        </Link>
         <nav className={isOpen ? 'actived' : ''}>
           <Link href={'/'}>
             <li onClick={() => setIsOpen(false)}>
