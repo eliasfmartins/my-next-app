@@ -20,7 +20,7 @@ export const Header = () => {
     <HeaderContainer>
       <HeaderContent>
         <Link href={'/'}>
-          <h1>NextProject</h1>
+          <h1>NextPJ</h1>
         </Link>
         <nav className={isOpen ? 'actived' : ''}>
           <Link href={'/'}>
