@@ -39,10 +39,6 @@ export const Header = () => {
               Sem ideia{' '}
             </li>
           </Link>
-          {/* <li className="search" onClick={() => setIsOpen(false)}>
-            <FileSearch />
-            Search{' '}
-          </li> */}
         </nav>
         <div className={isOpen ? 'input fixed' : 'input'}>
           {search ? (
