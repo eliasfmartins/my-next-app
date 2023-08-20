@@ -30,7 +30,7 @@ export const Header = () => {
           </Link>
           <Link href={'/'}>
             <li onClick={() => setIsOpen(false)}>
-              <BookBookmark /> Projetos
+              <BookBookmark /> New Card
             </li>
           </Link>
           <Link href={'/'}>
