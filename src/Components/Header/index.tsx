@@ -28,7 +28,7 @@ export const Header = () => {
               <HourglassMedium /> Home
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/registredCard'}>
             <li onClick={() => setIsOpen(false)}>
               <BookBookmark /> New Card
             </li>
