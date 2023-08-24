@@ -3,7 +3,7 @@ export const IdContainer = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-min-height: 84.8vh;
+min-height: 90.4vh;
 gap: 0 1rem ;
 width: 100%;
 img{
