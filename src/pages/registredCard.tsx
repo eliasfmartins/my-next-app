@@ -10,9 +10,14 @@ export default function RegisterCard () {
     const title = formData.get('titleCard') as string;
     const text = formData.get('text') as string
     const imgsrc = formData.get('imgsrc') as string
+    // aqui a logica pra criar o novo card
+
 
     setSuccess(true);
-  }
+    //limpar campos após o envio
+    event.currentTarget.reset();
+  };
+
   return(
     <RegisterContainer>
       <RegisterContent>
@@ -27,7 +32,7 @@ export default function RegisterCard () {
       <input type="text" id="imgsrc"/>
       <button type="submit">Send</button>
     </form>
-
+      { success && <p>Card Successfully created!</p>}
       </RegisterContent>
     </RegisterContainer>
   )
