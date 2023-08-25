@@ -1,9 +1,10 @@
+import { handlePosts } from "@/app/fetch";
 import { RegisterContainer, RegisterContent } from "@/styles/registerStyle";
 import { FormEvent, useState } from "react";
 
 export default function RegisterCard () {
   const [success, setSuccess] = useState(false);
-
+  
   const handleFormSubmit = (event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -11,12 +12,15 @@ export default function RegisterCard () {
     const text = formData.get('text') as string
     const imgsrc = formData.get('imgsrc') as string
     // aqui a logica pra criar o novo card
-
-
+    // const loadPosts = async () => {
+    //   const responsePostsAndPhotosJson = await handlePosts()
+    // }
     setSuccess(true);
+    
     //limpar campos após o envio
     event.currentTarget.reset();
   };
+  
 
   return(
     <RegisterContainer>

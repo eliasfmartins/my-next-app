@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable prettier/prettier */
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { InputField, PageContainer, PageContent } from '../styles/pageStyle';
 import {  MagnifyingGlass, X } from 'phosphor-react';
@@ -14,8 +13,11 @@ interface Cards {
 }
 export default function Home() {
   const [posts, setPosts] = useState<Cards[]>([]);
-  const  [value, setValue] = useState('')
-  const  filteredPosts = value ? posts.filter(post => {
+  const [postsPerPage, setPostsPerPage] = useState(4)
+  const [allPosts, setAllPosts] = useState<Cards[]>([])
+  const [value, setValue] = useState('')
+  
+  const filteredPosts = value ? posts.filter(post => {
     return post.title.toLowerCase().includes(value.toLowerCase())
   })
   :
@@ -24,10 +26,11 @@ export default function Home() {
     const fetchData = async () => {
 
       const responsePostsAndPhotosJson = await handlePosts();
-      setPosts(responsePostsAndPhotosJson);
+      setAllPosts(responsePostsAndPhotosJson);
+      setPosts(responsePostsAndPhotosJson.slice(0,postsPerPage))
     };
     fetchData();
- }, []);
+ }, [postsPerPage]);
 
   const {search,setSearch} = useContext(Context)
   const handleInputField = (e:ChangeEvent<HTMLInputElement>) => {
@@ -55,8 +58,8 @@ export default function Home() {
         </div>
 
 
-
       </PageContent>
+        {filteredPosts && <button onClick={() => setPostsPerPage(pv => pv + 4)}>Load More Posts</button>}
     </PageContainer>
   );
 }
