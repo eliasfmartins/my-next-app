@@ -1,19 +1,18 @@
-import { handlePosts } from "@/app/fetch";
+import { useNewCards } from "@/contexts/newCardsContext";
 import { RegisterContainer, RegisterContent } from "@/styles/registerStyle";
 import { FormEvent, useState } from "react";
 
 interface Card {
   id: number;
   title: string;
-  text: string;
-  imgsrc: string;
+  body: string;
+  imgUrl: string;
 }
 
 export default function RegisterCard () {
   const [success, setSuccess] = useState(false);
-  const [posts, setPosts] = useState<Card[]>([]);
+  const { newCards,addNewCard } = useNewCards();
 
-  
   const handleFormSubmit = (event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -22,11 +21,10 @@ export default function RegisterCard () {
     const newCard: Card ={
       id:Date.now(),
       title:formData.get('titleCard') as string,
-      text: formData.get('text') as string,
-      imgsrc:formData.get('imgsrc') as string,
+      body: formData.get('text') as string,
+      imgUrl:formData.get('imgsrc') as string,
     };
-
-      setPosts(prevPosts => [...prevPosts, newCard]);
+      addNewCard(newCard);
 
       setSuccess(true);
       event.currentTarget.reset();

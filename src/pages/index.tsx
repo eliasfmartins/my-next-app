@@ -5,6 +5,7 @@ import {  MagnifyingGlass, X } from 'phosphor-react';
 import { Context } from '@/contexts/searchContext';
 import { handlePosts } from '../app/fetch';
 import { Posts } from '@/Components/Posts';
+import { useNewCards } from '@/contexts/newCardsContext';
 interface Cards {
   id: number;
   title: string;
@@ -33,10 +34,12 @@ export default function Home() {
  }, [postsPerPage]);
 
   const {search,setSearch} = useContext(Context)
+  const { newCards } = useNewCards();
   const handleInputField = (e:ChangeEvent<HTMLInputElement>) => {
     const {value} = e.target
     setValue(value)
   }
+  const allDisplayedPosts = [...filteredPosts, ...newCards];
   return (
     <PageContainer>
       <InputField variable ={search}>
@@ -53,8 +56,7 @@ export default function Home() {
       </InputField>
       <PageContent>
         <div className='cards'>
-        {filteredPosts.length!==0?<Posts filteredPosts={filteredPosts} /> : <h1>Não existem posts</h1>}
-
+        {allDisplayedPosts.length!==0?<Posts allDisplayedPosts = {allDisplayedPosts} /> : <h1>Não existem posts</h1>}
         </div>
 
 
