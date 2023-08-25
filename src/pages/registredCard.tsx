@@ -2,23 +2,36 @@ import { handlePosts } from "@/app/fetch";
 import { RegisterContainer, RegisterContent } from "@/styles/registerStyle";
 import { FormEvent, useState } from "react";
 
+interface Card {
+  id: number;
+  title: string;
+  text: string;
+  imgsrc: string;
+}
+
 export default function RegisterCard () {
   const [success, setSuccess] = useState(false);
+  const [posts, setPosts] = useState<Card[]>([]);
+
   
   const handleFormSubmit = (event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const title = formData.get('titleCard') as string;
-    const text = formData.get('text') as string
-    const imgsrc = formData.get('imgsrc') as string
-    // aqui a logica pra criar o novo card
-    // const loadPosts = async () => {
-    //   const responsePostsAndPhotosJson = await handlePosts()
-    // }
-    setSuccess(true);
     
-    //limpar campos após o envio
-    event.currentTarget.reset();
+
+    const newCard: Card ={
+      id:Date.now(),
+      title:formData.get('titleCard') as string,
+      text: formData.get('text') as string,
+      imgsrc:formData.get('imgsrc') as string,
+    };
+
+      setPosts(prevPosts => [...prevPosts, newCard]);
+
+      setSuccess(true);
+      event.currentTarget.reset();
+
+   
   };
   
 
@@ -38,6 +51,7 @@ export default function RegisterCard () {
     </form>
       { success && <p>Card Successfully created!</p>}
       </RegisterContent>
+      
     </RegisterContainer>
   )
 }
