@@ -6,17 +6,13 @@ import { Context } from '@/contexts/searchContext';
 import { handlePosts } from '../app/fetch';
 import { Posts } from '@/Components/Posts';
 import { useNewCards } from '@/contexts/newCardsContext';
-import { Card } from '@/Components/Card';
-interface Cards {
-  id: number;
-  title: string;
-  body: string;
-  imgUrl: string;
-}
+import { CardProps } from '@/Components/Card';
+
+
 export default function Home() {
-  const [posts, setPosts] = useState<Cards[]>([]);
+  const [posts, setPosts] = useState<CardProps[]>([]);
   const [postsPerPage, setPostsPerPage] = useState(4)
-  const [allPosts, setAllPosts] = useState<Cards[]>([])
+  const [allPosts, setAllPosts] = useState<CardProps[]>([])
   const [value, setValue] = useState('')
   
   const filteredPosts = value ? posts.filter(post => {
@@ -34,13 +30,22 @@ export default function Home() {
     fetchData();
  }, [postsPerPage]);
 
+
+  const handleDelete =  (postId:number) =>{
+    const updatePosts = allDisplayedPosts.filter((post)=> post.id !== post.id);
+    setAllPosts(updatePosts);
+ }
+
+
   const {search,setSearch} = useContext(Context)
   const { newCards } = useNewCards();
   const handleInputField = (e:ChangeEvent<HTMLInputElement>) => {
     const {value} = e.target
     setValue(value)
   }
-  const allDisplayedPosts = [...filteredPosts, ...newCards];
+  const allDisplayedPosts: CardProps[] = [
+    ...filteredPosts.map(card=>({...card, onDelete:()=> handleDelete(card.id) })),
+     ...newCards];
   return (
     <PageContainer>
       <InputField variable ={search}>
@@ -57,7 +62,7 @@ export default function Home() {
       </InputField>
       <PageContent>
         <div className='cards'>
-        {allDisplayedPosts.length!==0?<Posts allDisplayedPosts = {allDisplayedPosts} /> : <h1>Não existem posts</h1>}
+        {allDisplayedPosts.length!==0?<Posts allDisplayedPosts = {allDisplayedPosts} onDelete ={handleDelete}/> : <h1>Não existem posts</h1>}
         </div>
 
 

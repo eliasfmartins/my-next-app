@@ -17,6 +17,8 @@ justify-content: center;
 img{
   border-radius: 8px 8px 0 0 ;
   min-width: 280px;
+  max-width: 290px;
+  height: 320px;
   width: 100%;
 }
 
@@ -42,10 +44,15 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-button{
+div{
+  display: flex;
   position: absolute;
   bottom: 5px;
   padding: 5px 25px;
+  gap: 1rem;
+}
+button{
+  padding: 5px;
   background: ${({ theme }) => theme.colors.sectenarycolor};
   border-radius: 12px 12px;
   color: white;

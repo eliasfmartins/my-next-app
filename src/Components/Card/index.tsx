@@ -8,10 +8,12 @@ export interface CardProps {
   title: string;
   body: string;
   imgUrl: string;
+  onDelete?: (postId: number) => void;
 }
-
 export const Card = ({ id, title, body, imgUrl }: CardProps) => {
   const { search, setSearch } = useContext(Context);
+ 
+
   return (
     <CardContainer key={id}>
       <img src={imgUrl} alt="" />
@@ -19,9 +21,13 @@ export const Card = ({ id, title, body, imgUrl }: CardProps) => {
         <h1>{title}</h1>
         <p>{body}</p>
         <LinkStyle href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
+          <div>
           <button onClick={() => setSearch(search === true)}>
             Click for more...
           </button>
+
+          <button>Delete Post</button>
+          </div>
         </LinkStyle>
       </CardContent>
     </CardContainer>
