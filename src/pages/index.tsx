@@ -6,6 +6,7 @@ import { Context } from '@/contexts/searchContext';
 import { handlePosts } from '../app/fetch';
 import { Posts } from '@/Components/Posts';
 import { useNewCards } from '@/contexts/newCardsContext';
+import { Card } from '@/Components/Card';
 interface Cards {
   id: number;
   title: string;

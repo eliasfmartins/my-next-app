@@ -11,7 +11,7 @@ interface Card {
 
 export default function RegisterCard () {
   const [success, setSuccess] = useState(false);
-  const { newCards,addNewCard } = useNewCards();
+  const {addNewCard } = useNewCards();
 
   const handleFormSubmit = (event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();

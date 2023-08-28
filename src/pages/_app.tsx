@@ -5,16 +5,19 @@ import { Footer } from '../Components/Footer';
 import { Header } from '@/Components/Header';
 import { GlobalStyles } from '@/app/GlobalStyles';
 import { SearchContext } from '@/contexts/searchContext';
+import { NewCardsProvider } from '@/contexts/newCardsContext';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={themeDefault}>
+      <NewCardsProvider>
       <SearchContext>
         <Header />
         <Component {...pageProps} />
         <Footer />
         <GlobalStyles />
       </SearchContext>
+      </NewCardsProvider>
     </ThemeProvider>
   );
 }

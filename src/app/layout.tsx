@@ -11,20 +11,19 @@ const roboto = Fira_Sans_Condensed({ weight: '400', subsets: ['latin'] });
 export default function RootLayout({
   children,
 }: {
-  // eslint-disable-next-line no-undef
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-          <NewCardsProvider>
         <ThemeProvider theme={themeDefault}>
+          <NewCardsProvider>
           <Header />
           {children}
           <Footer />
           <GlobalStyles />
-        </ThemeProvider>
           </NewCardsProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
