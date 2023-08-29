@@ -31,9 +31,10 @@ export default function Home() {
  }, [postsPerPage]);
 
 
-  const handleDelete =  (postId:number) =>{
-    const updatePosts = allDisplayedPosts.filter((post)=> post.id !== post.id);
-    setAllPosts(updatePosts);
+  const handleDelete = (postId: number) =>{
+    const updatePosts = allDisplayedPosts.filter((post)=> post.id !== postId);
+    setPosts(updatePosts);
+    console.log('pão')
  }
 
 
@@ -62,7 +63,7 @@ export default function Home() {
       </InputField>
       <PageContent>
         <div className='cards'>
-        {allDisplayedPosts.length!==0?<Posts allDisplayedPosts = {allDisplayedPosts} onDelete ={handleDelete}/> : <h1>Não existem posts</h1>}
+        {allDisplayedPosts.length!==0?<Posts allDisplayedPosts = {allDisplayedPosts} onDelete ={(postId)=> handleDelete(postId)}/> : <h1>Não existem posts</h1>}
         </div>
 
 
