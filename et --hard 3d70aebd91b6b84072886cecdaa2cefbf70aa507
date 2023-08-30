@@ -1,0 +1,260 @@
+[33mcommit de06097b516211ec082669c2ae198fc4fcef3f9e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Tue Aug 29 10:22:28 2023 -0300
+
+    fix: tentando resolver a ****
+
+[33mcommit 3d70aebd91b6b84072886cecdaa2cefbf70aa507[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Tue Aug 29 08:33:37 2023 -0300
+
+    fix: ajustando funcionalidade  all funcionado agora
+
+[33mcommit 576a2a10e983c607d25859e7a87a14c571915553[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Mon Aug 28 11:23:13 2023 -0300
+
+    fix: context and erros
+
+[33mcommit 7e269922af4378bcf7d8c67499a2d00a0f9334c8[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Mon Aug 28 08:08:36 2023 -0300
+
+    fix: arrumando context
+
+[33mcommit b1df400887af5171257f53f8684d47767c656f00[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Fri Aug 25 12:01:31 2023 -0300
+
+    feat: englobando o contento no layout
+
+[33mcommit a4fbd8b49367acf1fedfedbd9aab5387dd724eb5[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Fri Aug 25 11:22:50 2023 -0300
+
+    feat: criando Context
+
+[33mcommit d86fec0294b8b538c2a338153cc0f97feb3c7394[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Fri Aug 25 11:11:12 2023 -0300
+
+    feat: ajustando estrutura pra contexto
+
+[33mcommit 980d4c4cc809fb197b51919ecb2e7a0df1805bb7[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Fri Aug 25 10:39:48 2023 -0300
+
+    feat: criando paginação
+
+[33mcommit c0e8aaba5762675b171598f3414bcdfc28f91a8d[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Aug 24 10:15:14 2023 -0300
+
+    feat: criando logida  de registred cards2
+
+[33mcommit ded9016ae4d85bf515deee0b5a5219c84ecbda46[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Aug 24 09:57:54 2023 -0300
+
+    feat: criando logida  de registred cards
+
+[33mcommit 12a5db93ba0aef67afcbe94bce6e2d8cb07b1cfe[m
+Author: Elias Fonseca Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Aug 24 09:31:33 2023 -0300
+
+    fix: arrumando styles
+
+[33mcommit 3757ca8c5ff75bc92fd1b7c8578fb78e0cec5f47[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sun Aug 20 13:30:36 2023 -0300
+
+    feat: new page cards
+
+[33mcommit 3f1766d8a39cf8e9a959f211fed7feeaa16becce[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sun Aug 20 12:09:02 2023 -0300
+
+    Feat:Create Register Page Cards
+
+[33mcommit 54350eab18b6f3983e513a39fad1dc4403170980[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Tue Jun 20 17:27:28 2023 -0300
+
+    fixing: text idPage
+
+[33mcommit 140d09f8dd24c585d0350ac49cf208fc58d1338b[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 17 14:12:42 2023 -0300
+
+    fixing: responsividade
+
+[33mcommit aa0b4e45a82d42793649d9d899133c6ca97219ff[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 17 13:49:07 2023 -0300
+
+    fixing: eslint preettier
+
+[33mcommit a340f876af8f916516da2d77943bf1fc105747f0[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 17 13:41:56 2023 -0300
+
+    fixing: eslint footer
+
+[33mcommit d33516e624f08b03eddd2aa6abc4bfbdccf24a5e[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 17 13:38:11 2023 -0300
+
+    fixing: eslint
+
+[33mcommit 79705912f97b1d7bf7a5715a6606af7d9f06ec62[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 17 13:35:44 2023 -0300
+
+    fixing: eslint
+
+[33mcommit c6e0cce570d6de7bea3dc97d7a8e1e2fadfc7923[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Fri Jun 16 15:51:00 2023 -0300
+
+    fixing: header Link add
+
+[33mcommit 69871efdad8be9dc48f08d832052a10c5e0bd858[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 16:36:07 2023 -0300
+
+    fixing: header mobile menu
+
+[33mcommit a8ff9c195ab652b48b8fa1cbc3e9789fe66a30a2[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 15:55:32 2023 -0300
+
+    fixing: termiando page Cards
+
+[33mcommit f2fc69b64b279f5f0ab3c8fd02227d3580db06ea[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 15:24:33 2023 -0300
+
+    fixing: ajustando button mobile header
+
+[33mcommit 5b852bd38276aab8a68e03b6cdfa650ee5c7da83[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 14:42:30 2023 -0300
+
+    fixing: grid Cards
+
+[33mcommit b07c6ebd5cb710b3b32eb53f2e0d9f2815cb7c72[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 14:00:24 2023 -0300
+
+    fixing: ajustando css
+
+[33mcommit 116b76917e2ad7f077b3b82f463a34a25176ab2a[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 13:15:41 2023 -0300
+
+    fixing: all bugs de Styled-Component and routes
+
+[33mcommit cf959251451a1784c912c5c471e036a50e29b6a2[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Thu Jun 15 12:39:57 2023 -0300
+
+    fixing: criando _app.tsx pra corrigir erro do roteamento header e footer
+
+[33mcommit e1ab64aa13fe091372a6d4dd01fb92cb7fc61246[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Wed Jun 14 16:29:14 2023 -0300
+
+    fixing: Route Problem
+
+[33mcommit 982198ec09964f5ff02215863639c904f99b4388[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Tue Jun 13 21:43:46 2023 -0300
+
+    fixing: cardsPage
+
+[33mcommit ef7a6b383f39500e450ae66ab4d3a22b5817b02b[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Mon Jun 12 16:05:21 2023 -0300
+
+    feat: criando page dos cards
+
+[33mcommit 8af5086b737d1c02b5f1e3bc63f29f9d708f8733[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Mon Jun 12 15:23:54 2023 -0300
+
+    feat: criando page dos cards
+
+[33mcommit 81ca790d9b52930391b8c94b1584fa24d1ad97e9[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Wed Jun 7 17:18:17 2023 -0300
+
+    fixing: ajustando e typando props
+
+[33mcommit 281a60ef4673d2a5454c09a4bd6e4459d65d079b[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Wed Jun 7 17:13:28 2023 -0300
+
+    feat: implementando busca
+
+[33mcommit 0b5b2d46a34e0740f62aee1f3b5170e69eddf110[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Wed Jun 7 16:10:27 2023 -0300
+
+    feat: separando o fetch da api do page
+
+[33mcommit ee6b85e973a326eba3120d17d667654f6d8c1817[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Tue Jun 6 15:38:11 2023 -0300
+
+    feat: ajustando header e criando context
+
+[33mcommit 064796094db28f30cfc20c1ec1f946290f6e72c0[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Tue Jun 6 14:01:56 2023 -0300
+
+    feat: fixing grid templates and colors
+
+[33mcommit bfc47aa8262cbf104ad18bc77cf7e7b153d37a9b[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Mon Jun 5 17:40:55 2023 -0300
+
+    feat: fixing cards
+
+[33mcommit 703b1492cb650395e4730a31ae4e8b0c1cc6e41c[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sun Jun 4 20:35:22 2023 -0300
+
+    feat: styled do Card
+
+[33mcommit 7bab6e5052cb2161788e358747bfec67142b41cc[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sun Jun 4 20:33:03 2023 -0300
+
+    feat: criando componente Card
+
+[33mcommit 96cda5772cf6fb882b4bb99e8b0846dc767331ec[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 3 17:21:55 2023 -0300
+
+    feat: mesclando arrays e criando img
+
+[33mcommit b9ba488af5473fee885a12f678a8800db0f13715[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 3 16:50:22 2023 -0300
+
+    feat: fazendo fetch e pegando dados da  api
+
+[33mcommit b3f5db45b30f1747fea32f571dc84440eed1c814[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Sat Jun 3 15:28:35 2023 -0300
+
+    feat: criação footer eatt header
+
+[33mcommit 3f6b4a6117d2edb52c3fe63f0995e3e876278e4b[m
+Author: Elias F Martins <eliasmartinsdev8@gmail.com>
+Date:   Fri Jun 2 16:38:20 2023 -0300
+
+    feat: criação do header
+
+[33mcommit ed8f86e6045c01e59173a1bba5ba0d888a983105[m
+Author: Elias F Martins <eliasmartinsdev8@gmai
