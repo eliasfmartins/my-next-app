@@ -11,12 +11,12 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={themeDefault}>
       <NewCardsProvider>
-      <SearchContext>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-        <GlobalStyles />
-      </SearchContext>
+        <SearchContext>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+          <GlobalStyles />
+        </SearchContext>
       </NewCardsProvider>
     </ThemeProvider>
   );

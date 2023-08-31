@@ -18,10 +18,10 @@ export default function RootLayout({
       <body className={roboto.className}>
         <ThemeProvider theme={themeDefault}>
           <NewCardsProvider>
-          <Header />
-          {children}
-          <Footer />
-          <GlobalStyles />
+            <Header />
+            {children}
+            <Footer />
+            <GlobalStyles />
           </NewCardsProvider>
         </ThemeProvider>
       </body>

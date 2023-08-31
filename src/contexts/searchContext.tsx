@@ -7,7 +7,7 @@ type ContextType = {
 };
 export const Context = createContext<ContextType>({
   search: false,
-  setSearch: () => {},
+  setSearch: () => { },
 });
 export const SearchContext = ({ children }: { children: React.ReactNode }) => {
   const [search, setSearch] = useState(false);

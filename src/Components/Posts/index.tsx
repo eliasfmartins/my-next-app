@@ -2,7 +2,7 @@ import { Card } from '@/Components/Card';
 import { CardProps } from '@/Components/Card';
 interface PostsProps {
   allDisplayedPosts: CardProps[];
-  onDelete: (id:number) => void
+  onDelete: (id: number) => void
 }
 export const Posts = ({ allDisplayedPosts, }: PostsProps) => {
   return allDisplayedPosts ? (

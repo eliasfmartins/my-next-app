@@ -53,19 +53,19 @@ export default function Home() {
 
   return (
     <PageContainer>
-   
-   <InputField variable={search}>
+
+      <InputField variable={search}>
         {value ? <h1>Search for: {value}</h1> : <h1>{"Your Search Here"}</h1>}
-         <div className="input">
-           <input type="search" onChange={(e) => handleInputField(e)} value={value} />
-           <button >
-             <MagnifyingGlass size={20} />
-           </button>
-           <button>
-             <X size={20} onClick={() => setSearch(!search)} />
-           </button>
-         </div>
-       </InputField>
+        <div className="input">
+          <input type="search" onChange={(e) => handleInputField(e)} value={value} />
+          <button >
+            <MagnifyingGlass size={20} />
+          </button>
+          <button>
+            <X size={20} onClick={() => setSearch(!search)} />
+          </button>
+        </div>
+      </InputField>
       <PageContent>
         <div className='cards'>
           {displayedPosts.length !== 0 ? (

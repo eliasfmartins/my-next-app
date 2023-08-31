@@ -8,12 +8,12 @@ export interface CardProps {
   title: string;
   body: string;
   imgUrl: string;
-  onDelete?:(postId: number) => void
+  onDelete?: (postId: number) => void
 }
 
-export const Card = ({ id, title, body, imgUrl ,onDelete}: CardProps) => {
+export const Card = ({ id, title, body, imgUrl, onDelete }: CardProps) => {
   const { search, setSearch } = useContext(Context);
- 
+
   const handleDelete = (id: number) => {
     if (onDelete) {
       onDelete(id);
@@ -27,15 +27,15 @@ export const Card = ({ id, title, body, imgUrl ,onDelete}: CardProps) => {
       <CardContent>
         <h1>{title}</h1>
         <p>{body}</p>
-          <div>
-        <LinkStyle href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
-          <button onClick={() => setSearch(search === true)}>
-            Click for more...
-          </button>
-        </LinkStyle>
+        <div>
+          <LinkStyle href={`${id}?title=${title}&body=${body}&imgUrl=${imgUrl}`}>
+            <button onClick={() => setSearch(search === true)}>
+              Click for more...
+            </button>
+          </LinkStyle>
 
-          <button onClick={()=> handleDelete(id)}>Delete Post</button>
-          </div>
+          <button onClick={() => handleDelete(id)}>Delete Post</button>
+        </div>
       </CardContent>
     </CardContainer>
   );
