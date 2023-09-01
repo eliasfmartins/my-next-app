@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 export const CardContainer = styled.div`
-padding: 5px;
+padding: 4px;
 position: relative;
-gap: 1rem;
+gap: 0.5rem;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -16,8 +16,7 @@ align-items: center;
 justify-content: center;
 img{
   border-radius: 8px 8px 0 0 ;
-  min-width: 280px;
-  max-width: 290px;
+  min-width: 90%;
   height: 320px;
   width: 100%;
 }
@@ -31,26 +30,28 @@ justify-content: center;
 border-top:2px solid white ;
 width: 95%;
 padding: 5px;
-margin-bottom: 25px;
-min-height: 350px;
+margin-bottom: 5px;
+min-height: 400px;
 h1{
   text-align: center;
 }
 
-
-`;
-export const LinkStyle = styled(Link)`
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
 div{
   display: flex;
   position: absolute;
   bottom: 5px;
   padding: 5px 25px;
   gap: 1rem;
+  background-color: red;
 }
+`;
+export const LinkStyle = styled(Link)`
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+
 button{
   padding: 5px;
   background: ${({ theme }) => theme.colors.sectenarycolor};
@@ -62,5 +63,6 @@ button{
     color: black;
     background: white;
   }
+ 
 }
 `;
