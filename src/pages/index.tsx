@@ -75,7 +75,7 @@ export default function Home() {
           )}
         </div>
       </PageContent>
-      {filteredPosts.length > postsPerPage && <button onClick={loadMorePosts}>Load More Posts</button>}
+      {filteredPosts.length > postsPerPage && <button className='btn-more' onClick={loadMorePosts}>Load More Posts</button>}
     </PageContainer>
   );
 }

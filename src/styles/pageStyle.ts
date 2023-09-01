@@ -11,15 +11,29 @@ justify-content: center;
 width: 100%;
 background: red;
 background: ${({ theme }) => theme.colors.quartenaryColor};
+gap: 1rem;
+button {
+  background-color: transparent;
+  color: blue;
+  width: 90%;
+  max-width: 1200px;
+  background-color: aquamarine;
+  border-radius: 12px;
+  margin-bottom: -5px;
+  padding: 20px;
+}
+.btn-more{
+  margin-bottom: 10px;
+}
 `;
 export const PageContent = styled.div`
   color: ${({ theme }) => theme.colors.primaryColor};
-  max-width: 1300px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
+  max-width: 90%;
 
   div.cards {
     margin-top: 10px;
